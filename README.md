@@ -1,40 +1,26 @@
 ## Getting Started
 
-Create a project using this example:
+WalletConnect で switch network するとエラーになるリポジトリ。
 
-```bash
-npx thirdweb create --template next-typescript-starter
+.env.local に Thirdweb の Client ID (`NEXT_PUBLIC_TEMPLATE_CLIENT_ID`) と、WalletConnect の ProjectID (`NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID`) を入れてください。(`.env.example` を参考に)
+
+その後
+```
+yarn -i
+yarn dev
 ```
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+で動くはず
 
-On `pages/_app.tsx`, you'll find our `ThirdwebProvider` wrapping your app, this is necessary for our [hooks](https://portal.thirdweb.com/react) and
-[UI Components](https://portal.thirdweb.com/ui-components) to work.
+で、Connect Wallet ボタンを押してWalletを接続して、`switch network`ボタンを押すとエラーになります。
 
-## Environment Variables
+![Alt text](image.png)
 
-To run this project, you will need to add environment variables. Check the `.env.example` file for all the environment variables required and add it to `.env.local` file or set them up on your hosting provider.
-
-## Deploy to IPFS
-
-Deploy a copy of your application to IPFS using the following command:
+ちなみに、このリポジトリは
 
 ```bash
-yarn deploy
+npx thirdweb create 
 ```
 
-## Learn More
+で作ってから、最低限の追加実装だけしています。
 
-To learn more about thirdweb and Next.js, take a look at the following resources:
-
-- [thirdweb React Documentation](https://docs.thirdweb.com/react) - learn about our React SDK.
-- [thirdweb TypeScript Documentation](https://docs.thirdweb.com/typescript) - learn about our JavaScript/TypeScript SDK.
-- [thirdweb Portal](https://docs.thirdweb.com) - check our guides and development resources.
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Templates](https://thirdweb.com/templates)
-
-You can check out [the thirdweb GitHub organization](https://github.com/thirdweb-dev) - your feedback and contributions are welcome!
-
-## Join our Discord!
-
-For any questions, suggestions, join our discord at [https://discord.gg/thirdweb](https://discord.gg/thirdweb).
