@@ -1,9 +1,17 @@
-import { ConnectWallet } from "@thirdweb-dev/react";
+import {
+  ConnectWallet,
+  useNetworkMismatch,
+  useSwitchChain,
+} from "@thirdweb-dev/react";
 import styles from "../styles/Home.module.css";
 import Image from "next/image";
 import { NextPage } from "next";
+import { Goerli, Mumbai } from "@thirdweb-dev/chains";
 
 const Home: NextPage = () => {
+  const isMismatchNetwork = useNetworkMismatch();
+  const switchChain = useSwitchChain();
+
   return (
     <main className={styles.main}>
       <div className={styles.container}>
@@ -36,6 +44,11 @@ const Home: NextPage = () => {
             />
           </div>
         </div>
+        {isMismatchNetwork && (
+          <button onClick={() => switchChain(Mumbai.chainId)}>
+            Switch Network
+          </button>
+        )}
 
         <div className={styles.grid}>
           <a
