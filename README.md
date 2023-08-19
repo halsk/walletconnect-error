@@ -2,6 +2,8 @@
 
 WalletConnect で switch network するとエラーになるリポジトリ。
 
+Metamask ではうまくいくが、Rainbow だとうまくいかない。
+
 .env.local に Thirdweb の Client ID (`NEXT_PUBLIC_TEMPLATE_CLIENT_ID`) と、WalletConnect の ProjectID (`NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID`) を入れてください。(`.env.example` を参考に)
 
 その後
